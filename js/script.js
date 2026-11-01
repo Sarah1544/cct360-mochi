@@ -7,6 +7,11 @@ let livingVisited = false;
 let drawerVisited = false;
 let workspaceVisited = false;
 let studioVisited = false;
+function updateClueCounter() {
+  document.getElementById("clue-counter").innerHTML =
+    "Clues found: " + cluesFound() + " of 3";
+}
+
 
 function hideAll() {
   document.getElementById("entrance").style.display = "none";
@@ -71,7 +76,9 @@ function cluesFound() {
   if (couchFound == true) { count++; }
   return count;
 }
-
+document.getElementById("toy").addEventListener("click", updateClueCounter);
+document.getElementById("bowl").addEventListener("click", updateClueCounter);
+document.getElementById("couch").addEventListener("click", updateClueCounter);
 document.getElementById("pumpkin").addEventListener("click", function () {
   hasKey = true;
   document.getElementById("entrance-text").innerHTML = "You found a spare key under the pumpkin.";
@@ -88,6 +95,7 @@ document.getElementById("door").addEventListener("click", function () {
 document.getElementById("toy").addEventListener("click", function () {
   if (toyFound == false) {
     toyFound = true;
+    updateClueCounter();
     document.getElementById("living-text").innerHTML = "Mochi's favourite toy is lying untouched. She never leaves this behind!";
   } else {
     document.getElementById("living-text").innerHTML = "You already checked the toy.";
@@ -97,6 +105,7 @@ document.getElementById("toy").addEventListener("click", function () {
 document.getElementById("bowl").addEventListener("click", function () {
   if (bowlFound == false) {
     bowlFound = true;
+    updateClueCounter();
     document.getElementById("living-text").innerHTML = "Her food is still here. Wherever Mochi went, she must have been in a hurry.";
   } else {
     document.getElementById("living-text").innerHTML = "You already checked the bowl.";
@@ -106,6 +115,7 @@ document.getElementById("bowl").addEventListener("click", function () {
 document.getElementById("couch").addEventListener("click", function () {
   if (couchFound == false) {
     couchFound = true;
+    updateClueCounter();
     document.getElementById("living-text").innerHTML = "There's a little indentation in the cushion. Mochi was definitely here earlier.";
   } else {
     document.getElementById("living-text").innerHTML = "You already checked the couch.";
@@ -162,7 +172,7 @@ function enterStudio() {
   let restart = document.getElementById("restart");
   if (cluesFound() == 3 && spoolieFound == true) {
     text.innerHTML = "She wasn't missing, she was filling in for her mom!";
-    restart.style.display = "none";
+    restart.style.display = "inline";
   } else {
     text.innerHTML = "Looks like you just missed her! Maybe there's another clue you haven't discovered.";
     restart.style.display = "inline";

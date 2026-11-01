@@ -95,6 +95,7 @@ document.getElementById("door").addEventListener("click", function () {
 document.getElementById("toy").addEventListener("click", function () {
   if (toyFound == false) {
     toyFound = true;
+    updateClueCounter();
     document.getElementById("living-text").innerHTML = "Mochi's favourite toy is lying untouched. She never leaves this behind!";
   } else {
     document.getElementById("living-text").innerHTML = "You already checked the toy.";
@@ -104,6 +105,7 @@ document.getElementById("toy").addEventListener("click", function () {
 document.getElementById("bowl").addEventListener("click", function () {
   if (bowlFound == false) {
     bowlFound = true;
+    updateClueCounter();
     document.getElementById("living-text").innerHTML = "Her food is still here. Wherever Mochi went, she must have been in a hurry.";
   } else {
     document.getElementById("living-text").innerHTML = "You already checked the bowl.";
@@ -113,6 +115,7 @@ document.getElementById("bowl").addEventListener("click", function () {
 document.getElementById("couch").addEventListener("click", function () {
   if (couchFound == false) {
     couchFound = true;
+    updateClueCounter();
     document.getElementById("living-text").innerHTML = "There's a little indentation in the cushion. Mochi was definitely here earlier.";
   } else {
     document.getElementById("living-text").innerHTML = "You already checked the couch.";

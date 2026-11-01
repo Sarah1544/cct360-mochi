@@ -169,7 +169,7 @@ function enterStudio() {
   let restart = document.getElementById("restart");
   if (cluesFound() == 3 && spoolieFound == true) {
     text.innerHTML = "She wasn't missing, she was filling in for her mom!";
-    restart.style.display = "none";
+    restart.style.display = "inline";
   } else {
     text.innerHTML = "Looks like you just missed her! Maybe there's another clue you haven't discovered.";
     restart.style.display = "inline";

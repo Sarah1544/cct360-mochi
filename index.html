@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where's Mochi?</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Where's Mochi?</h1>
+    <p id="return-note"></p>
+
+    <div id="entrance" class="scene">
+      <img src="images/image1.jpg" alt="Mochi's house at night" />
+      <p id="entrance-text">It's getting late, and Mochi is nowhere to be seen. Maybe there's a way inside.</p>
+      <button id="pumpkin">Look under the pumpkin</button>
+      <button id="door">Try the front door</button>
+    </div>
+
+    <div id="living" class="scene">
+      <img src="images/image2.jpg" alt="living room at night" />
+      <p id="living-text">The living room is quiet.</p>
+      <button id="toy">Cat toy</button>
+      <button id="bowl">Food bowl</button>
+      <button id="couch">Couch</button>
+      <button id="drawer-go">Open the drawer</button>
+      <button id="living-workspace">Go to Mochi's workspace</button>
+    </div>
+
+    <div id="drawer" class="scene">
+      <img src="images/image3.jpg" alt="brown wooden drawer" />
+      <p id="drawer-text"></p>
+      <button id="drawer-back">Back to the living room</button>
+      <button id="drawer-workspace">Go to Mochi's workspace</button>
+    </div>
+
+    <div id="workspace" class="scene">
+      <img src="images/image4.jpg" alt="laptop and smoothie on a desk" />
+      <p id="workspace-text">Maybe she's in her mom's workplace, helping.</p>
+      <button id="laptop">Laptop</button>
+      <button id="smoothie">Smoothie</button>
+      <button id="spoolie">Pink spoolie</button>
+      <button id="studio-go">Go to the lash studio</button>
+      <button id="workspace-back">Back to the living room</button>
+    </div>
+
+    <div id="studio" class="scene">
+      <img src="images/image5.jpg" alt="cat holding a pink spoolie" />
+      <p id="studio-text"></p>
+      <button id="restart">Try again</button>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

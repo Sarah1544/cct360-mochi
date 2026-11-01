@@ -7,6 +7,11 @@ let livingVisited = false;
 let drawerVisited = false;
 let workspaceVisited = false;
 let studioVisited = false;
+function updateClueCounter() {
+  document.getElementById("clue-counter").innerHTML =
+    "Clues found: " + cluesFound() + " of 3";
+}
+
 
 function hideAll() {
   document.getElementById("entrance").style.display = "none";
@@ -71,7 +76,9 @@ function cluesFound() {
   if (couchFound == true) { count++; }
   return count;
 }
-
+document.getElementById("toy").addEventListener("click", updateClueCounter);
+document.getElementById("bowl").addEventListener("click", updateClueCounter);
+document.getElementById("couch").addEventListener("click", updateClueCounter);
 document.getElementById("pumpkin").addEventListener("click", function () {
   hasKey = true;
   document.getElementById("entrance-text").innerHTML = "You found a spare key under the pumpkin.";

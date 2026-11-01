@@ -20,3 +20,26 @@ button {
   padding: 10px 14px;
   margin: 6px;
 }
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+  body {
+    margin: 0 12px;
+  }
+
+  .scene img {
+    width: 100%;
+    height: auto;
+  }
+
+  .scene button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+

@@ -150,12 +150,12 @@ document.getElementById("laptop").addEventListener("click", function () {
 });
 
 document.getElementById("smoothie").addEventListener("click", function () {
-  document.getElementById("workspace-text").innerHTML = "Oh wait! She has a smoothie open with her mom's laptop.";
+  document.getElementById("workspace-text").innerHTML = "Her favourite smoothie untouched, she was here but in a rush!";
 });
 
 document.getElementById("spoolie").addEventListener("click", function () {
   spoolieFound = true;
-  document.getElementById("workspace-text").innerHTML = "A pink lash brush? Mochi must be helping with the lashes.";
+  document.getElementById("workspace-text").innerHTML = "A pink spoolie? She loves to play with these! She wouldn't leave it behind, unless she found the stash!";
   document.getElementById("studio-go").style.display = "inline";
 });
 
